@@ -7,9 +7,9 @@ function SendMessage({ endOfMessagesRef }) {
   const [message, setMessage] = useState('')
 
   const sendMessage = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
-    if (!message) return
+    if (!message) return;
 
     const Messages = Moralis.Object.extend('Messages')
     const messages = new Messages()
@@ -29,7 +29,7 @@ function SendMessage({ endOfMessagesRef }) {
         }
       )
 
-    endOfMessagesRef.current.scrollIntoView({ behavior: 'smooth' })
+    endOfMessagesRef.current.scrollIntoView({ behavior: 'smooth' });
     setMessage("");
   }
   return (
